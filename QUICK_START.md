@@ -116,18 +116,15 @@ Replace:
 
 ### 2. Contact Information (5 minutes)
 
-**Update phone numbers**:
+**Update phone numbers** (if needed):
 
-Search for `+971-XXX-XXXXXX` and replace with your actual number.
-
-Search for `wa.me/971XXXXXXXXX` and replace with your WhatsApp number.
+Search for `+971-XXX-XXXXXX` and replace with your actual number (if you want to display it).
 
 **Update social media**:
 
 Search for `href="#"` in footer and contact sections, replace with:
 - LinkedIn: `https://www.linkedin.com/company/yourcompany`
 - Instagram: `https://www.instagram.com/yourcompany`
-- WhatsApp: `https://wa.me/971XXXXXXXXX`
 
 ### 3. Product Images (Optional, but recommended)
 

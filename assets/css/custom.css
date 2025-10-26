@@ -363,15 +363,6 @@ input.border-red-500 {
 }
 
 /* ===========================
-   FLOATING WHATSAPP BUTTON
-   =========================== */
-
-.fixed.bottom-6.right-6 {
-    animation: pulse 2s ease-in-out infinite;
-    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
-}
-
-/* ===========================
    SCROLL EFFECTS
    =========================== */
 
