@@ -65,3 +65,9 @@ coverage/
 # Misc
 *.pem
 .vercel
+
+# Python Virtual Environments
+venv/
+scripts/venv/
+*.pyc
+__pycache__/

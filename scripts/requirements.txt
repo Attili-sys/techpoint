@@ -1,0 +1,13 @@
+# Tech Point FZE - Image Scraper Dependencies
+# Install with: pip install -r requirements.txt
+
+# DuckDuckGo Search API - NEW package name (renamed from duckduckgo-search)
+ddgs>=1.0.0
+
+# HTTP library - for downloading images
+requests>=2.31.0
+
+# Required dependencies
+typing_extensions>=4.7.0
+primp>=0.6.0
+
