@@ -336,9 +336,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 navLinksList.forEach(link => {
-                    link.classList.remove('text-blue-900', 'font-bold');
+                    link.classList.remove('text-gray-600', 'font-bold');
                     if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('text-blue-900', 'font-bold');
+                        link.classList.add('text-gray-600', 'font-bold');
                     }
                 });
             }
@@ -392,7 +392,7 @@ function debounce(func, wait) {
 // CONSOLE WELCOME MESSAGE
 // ===========================
 
-console.log('%c🚀 Tech Point FZE', 'color: #1E3A8A; font-size: 24px; font-weight: bold;');
-console.log('%cYour Trusted Wholesale Partner for Premium Mobile Phones', 'color: #10B981; font-size: 14px;');
+console.log('%c🚀 Tech Point FZE', 'color: #4B5563; font-size: 24px; font-weight: bold;');
+console.log('%cYour Trusted Wholesale Partner for Premium Mobile Phones', 'color: #15803D; font-size: 14px;');
 console.log('%cWebsite: https://techpointfze.com', 'color: #6B7280; font-size: 12px;');
 console.log('%cEmail: info@techpointfze.com', 'color: #6B7280; font-size: 12px;');
