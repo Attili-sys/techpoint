@@ -96,11 +96,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Filter products
             productCards.forEach(card => {
                 if (brand === 'all' || card.getAttribute('data-brand') === brand) {
-                    card.style.display = 'block';
+                    card.style.display = '';
+                    card.style.opacity = '1';
                     // Add fade-in animation
                     card.style.animation = 'fadeIn 0.5s ease-in-out';
                 } else {
                     card.style.display = 'none';
+                    card.style.opacity = '0';
                 }
             });
         });
