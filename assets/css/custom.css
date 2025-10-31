@@ -445,9 +445,10 @@ input.border-red-500 {
         transform: none !important;
     }
     
-    /* Ensure products are visible on mobile */
+    /* Ensure products are visible on mobile by default */
+    /* Note: Removed !important to allow JavaScript filtering to work */
     .product-card {
-        display: block !important;
+        display: block;
     }
     
     /* Optimize product card sizing for mobile 2-column layout */
@@ -636,6 +637,61 @@ a:hover {
     section {
         padding-top: 3rem;
         padding-bottom: 3rem;
+    }
+}
+
+/* ===========================
+   SCROLL TO TOP BUTTON
+   =========================== */
+
+#scroll-to-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #4B5563;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scroll-to-top-btn:hover {
+    background-color: #374151;
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+#scroll-to-top-btn:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+#scroll-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scroll-to-top-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    #scroll-to-top-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 3rem;
+        height: 3rem;
     }
 }
 
