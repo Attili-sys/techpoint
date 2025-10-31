@@ -96,13 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Filter products
             productCards.forEach(card => {
                 if (brand === 'all' || card.getAttribute('data-brand') === brand) {
+                    // Show product - clear any inline display style to allow CSS to take over
                     card.style.display = '';
                     card.style.opacity = '1';
+                    card.style.visibility = 'visible';
                     // Add fade-in animation
                     card.style.animation = 'fadeIn 0.5s ease-in-out';
                 } else {
+                    // Hide product
                     card.style.display = 'none';
                     card.style.opacity = '0';
+                    card.style.visibility = 'hidden';
                 }
             });
         });
@@ -293,6 +297,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ===========================
+    // SCROLL TO TOP BUTTON
+    // ===========================
+    
+    const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+    const homeSection = document.getElementById('home');
+    
+    function toggleScrollToTopButton() {
+        if (!scrollToTopBtn || !homeSection) return;
+        
+        // Get the bottom position of the hero/home section
+        const homeSectionBottom = homeSection.offsetTop + homeSection.offsetHeight;
+        const scrollPosition = window.pageYOffset + window.innerHeight;
+        
+        // Show button when scrolled past the hero section
+        if (window.pageYOffset > homeSectionBottom || scrollPosition > homeSectionBottom) {
+            scrollToTopBtn.classList.remove('hidden');
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+            scrollToTopBtn.classList.add('hidden');
+        }
+    }
+    
+    // Check on scroll
+    window.addEventListener('scroll', toggleScrollToTopButton);
+    
+    // Check on initial load
+    toggleScrollToTopButton();
+    
+    // Handle click to scroll to top
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // ===========================
     // INTERSECTION OBSERVER FOR ANIMATIONS
     // ===========================
     
@@ -394,7 +438,7 @@ function debounce(func, wait) {
 // CONSOLE WELCOME MESSAGE
 // ===========================
 
-console.log('%c🚀 Tech Point FZE', 'color: #4B5563; font-size: 24px; font-weight: bold;');
+console.log('%c?? Tech Point FZE', 'color: #4B5563; font-size: 24px; font-weight: bold;');
 console.log('%cYour Trusted Wholesale Partner for Premium Mobile Phones', 'color: #15803D; font-size: 14px;');
 console.log('%cWebsite: https://techpointfze.com', 'color: #6B7280; font-size: 12px;');
 console.log('%cEmail: info@techpointfze.com', 'color: #6B7280; font-size: 12px;');
